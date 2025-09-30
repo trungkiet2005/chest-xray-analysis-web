@@ -1,0 +1,385 @@
+/* Classification Results Styles */
+.results-container {
+  margin-top: 2rem;
+  background: var(--background-alt);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.results-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.result-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.result-class {
+  flex: 0 0 150px;
+  font-weight: 600;
+  color: var(--primary);
+}
+.result-bar {
+  flex: 1;
+  background: var(--background);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-left: 1rem;
+  height: 32px;
+  position: relative;
+}
+.result-bar-fill {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: #fff;
+  font-weight: 500;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
+  transition: width 0.5s;
+  font-size: 1rem;
+}
+/* Predict page styles */
+.predict-page {
+  padding: 2rem 0;
+  min-height: calc(100vh - 80px);
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Connection Status */
+.connection-status {
+  margin-bottom: 2rem;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.status-indicator.checking {
+  background-color: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #1D4ED8;
+}
+
+.status-indicator.connected {
+  background-color: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #15803D;
+}
+
+.status-indicator.failed {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #DC2626;
+}
+
+.status-icon {
+  font-size: 1rem;
+}
+
+.spinner.small {
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+}
+
+.upload-section,
+.results-section,
+.info-section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+/* File upload area */
+.file-input {
+  border: 2px dashed var(--border);
+  border-radius: 0.75rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: var(--background-alt);
+  position: relative;
+  overflow: hidden;
+}
+
+.file-input:hover {
+  border-color: var(--primary);
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+.file-input.dragover {
+  border-color: var(--primary);
+  background-color: rgba(59, 130, 246, 0.1);
+  transform: scale(1.02);
+}
+
+.file-input-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.file-icon {
+  font-size: 3rem;
+  opacity: 0.7;
+}
+
+.file-text {
+  font-size: 1.125rem;
+  color: var(--text);
+  font-weight: 500;
+  margin: 0;
+}
+
+.file-hint {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Error message */
+.error-message {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #DC2626;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.error-header {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.error-details {
+  margin-bottom: 0.75rem;
+  font-family: 'Courier New', monospace;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.error-suggestions {
+  font-size: 0.875rem;
+}
+
+.error-suggestions strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.error-suggestions ul {
+  margin: 0.5rem 0 0 1rem;
+  padding: 0;
+}
+
+.error-suggestions li {
+  margin-bottom: 0.25rem;
+}
+
+/* Upload actions */
+.upload-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Results section */
+.result-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.image-placeholder {
+  background-color: var(--background-alt);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  aspect-ratio: 1;
+}
+
+.placeholder-content {
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.placeholder-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.placeholder-content p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.result-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Info steps */
+.info-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.info-step {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+
+.step-content h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.step-content p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Loading spinner in placeholder */
+.image-placeholder .spinner {
+  margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .predict-page {
+    padding: 1rem 0;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .page-subtitle {
+    font-size: 1rem;
+  }
+  
+  .file-input {
+    padding: 2rem 1rem;
+  }
+  
+  .file-text {
+    font-size: 1rem;
+  }
+  
+  .upload-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .upload-actions .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .info-steps {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .image-placeholder {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header {
+    margin-bottom: 2rem;
+  }
+  
+  .page-title {
+    font-size: 1.75rem;
+  }
+  
+  .file-input {
+    padding: 1.5rem 0.75rem;
+  }
+  
+  .file-icon {
+    font-size: 2rem;
+  }
+  
+  .placeholder-icon {
+    font-size: 2rem;
+  }
+}
+
+/* Small button style */
+.btn.btn-small {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+}
