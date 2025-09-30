@@ -1,4 +1,4 @@
-export const API_BASE_URL = "https://fa44955cb047.ngrok-free.app"; // Change this to your FastAPI backend URL
+export const API_BASE_URL = "https://a32c3b0b1691.ngrok-free.app"; // Change this to your FastAPI backend URL
 
 // Test function to check if API is accessible
 export async function testConnection() {
